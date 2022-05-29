@@ -116,6 +116,47 @@ public class MainActivity extends AppCompatActivity {
                 button4.setText(ans+ " ");
             }
         }
+if(operand2 == 0) {
+            int ans=-100;
+            String operator = operators[random.nextInt(4)];
+            textView2.setText(operand1 + operator + operand2);
+            if(operator.equals("+")){
+                ans=operand1+operand2;
+            }else if(operator.equals("-")){
+                ans=operand1-operand2;
+            }
+            else if(operator.equals("/")){
+                ans=0;
+            }
+            else if(operator.equals("*")){
+                ans=operand1*operand2;
+            }
+            if(correctButton == 0 ) {
+                button1.setText(ans+"");
+                button2.setText(ans + 1+" ");
+                button3.setText(ans - 1 + "");
+                button4.setText(ans + 2  + "");
+            }
+            else if(correctButton== 1 ){
+                button1.setText(ans  + 1 + " ");
+                button2.setText(ans+ " ");
+                button3.setText(ans - 1  + "");
+                button4.setText(ans  + 2 + "");
+            }
+            else if(correctButton== 2 ){
+                button1.setText(ans + 1 + " " );
+                button2.setText(ans - 1  + " ");
+                button3.setText(ans+ " ");
+                button4.setText(operand1  + 1 + "");
+            }
+            else {
+                //button1.setText(ans);
+                button1.setText(ans + 1 + " " );
+                button2.setText(ans - 1  + " ");
+                button3.setText(operand1  + 1 + "");
+                button4.setText(ans+ " ");
+            }
+        }
 
       // Your code here, to diplay correct and incorrect options on the buttons
 
